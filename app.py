@@ -314,7 +314,7 @@ def _render_recommendations(results: pd.DataFrame, user_pref: UserPreference, ke
 
 
 def page_text_search(df: pd.DataFrame):
-    st.title("💬 Cari Kafe dengan Bahasa Alami")
+    st.title("💬 Cari Kafe")
     st.markdown(
         """
         Ketik apa yang Anda cari dengan kalimat biasa, sistem akan otomatis paham
