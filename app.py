@@ -40,7 +40,7 @@ from src.google_maps import (
 # Page Config
 # =============================================================================
 st.set_page_config(
-    page_title="Cafe Recommender Bandung",
+    page_title="Bandung Cafinder",
     page_icon="☕",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -71,7 +71,7 @@ def get_stats() -> dict:
 # Sidebar Navigation
 # =============================================================================
 def sidebar_nav() -> str:
-    st.sidebar.markdown("# ☕ Cafe Recommender")
+    st.sidebar.markdown("# ☕ Bandung Cafinder")
     st.sidebar.markdown("**Sistem Rekomendasi Kafe Bandung**")
     st.sidebar.caption("Berbasis ulasan Google Maps + NLP/LLM")
 
@@ -129,7 +129,7 @@ def sidebar_nav() -> str:
 # Halaman: Beranda
 # =============================================================================
 def page_home(df: pd.DataFrame, stats: dict):
-    st.title("☕ Sistem Rekomendasi Kafe Bandung")
+    st.title("☕ Bandung Cafinder")
     st.markdown(
         """
         Selamat datang! Sistem ini membantu Anda menemukan kafe yang sesuai untuk
@@ -213,9 +213,9 @@ def page_home(df: pd.DataFrame, stats: dict):
 EXAMPLE_QUERIES = [
     "Saya cari kafe yang tenang ada wifi dan stopkontak buat skripsian di Bandung Utara",
     "Mau ngumpul dengan teman, cafe rame, makanan enak, harga terjangkau",
-    "Cafe nyaman dekat Dago, ber-AC, rating minimal 4.5",
-    "Tempat populer di Bandung Tengah dengan suasana cozy untuk wfc",
     "Kafe murah untuk mahasiswa, banyak colokan, tidak berisik",
+    "Tempat populer di Bandung Tengah dengan suasana cozy untuk wfc",
+    "Cafe nyaman dekat Dago, ber-AC, rating minimal 4.5",
 ]
 
 
