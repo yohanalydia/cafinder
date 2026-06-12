@@ -1156,7 +1156,7 @@ def _render_recommendations(
 
 def render_cari(df: pd.DataFrame) -> None:
     section_anchor("cari")
-    section_heading("💬", "Cari Kafe dengan Bahasa Alami")
+    section_heading("💬", "Cari Kafe")
 
     st.markdown(
         "Ketik apa yang Anda cari dengan kalimat biasa — sistem akan otomatis "
