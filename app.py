@@ -163,6 +163,14 @@ body:not(.app-loaded) [data-testid="stVerticalBlock"] > div:nth-child(n+11){ ani
 
 [data-testid="stSidebar"] * { color: var(--cream) !important; }
 
+[data-testid="stSidebar"] code {
+    background: rgba(0,0,0,0.25) !important;
+    color: #FFE8B0 !important;
+    border-radius: 3px !important;
+    padding: 0.1rem 0.35rem !important;
+    font-size: 0.85em !important;
+}
+
 [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h1,
 [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h2,
 [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h3 {
@@ -1159,7 +1167,7 @@ def render_cari(df: pd.DataFrame) -> None:
     section_heading("💬", "Cari Kafe")
 
     st.markdown(
-        "Ketik apa yang Anda cari dengan kalimat biasa — sistem akan otomatis "
+        "Ketik apa yang Anda cari dengan kalimat sehari-hari — sistem akan otomatis "
         "memahami preferensi Anda. Contoh:"
     )
 
@@ -1476,27 +1484,6 @@ def render_tentang() -> None:
                 f'<div class="pc-body">{body}</div>'
                 f'</div>',
                 unsafe_allow_html=True,
-            )
-
-    st.markdown("---")
-
-    col_ds, col_llm = st.columns(2)
-    with col_ds:
-        with st.container(border=True):
-            st.markdown("### 📊 Dataset")
-            st.markdown(
-                "Data ulasan Google Maps kafe di Bandung (Utara, Selatan, Timur, Barat, Tengah) "
-                "hasil scraping dengan **Playwright**. Lihat `data/dataset_final.csv`."
-            )
-    with col_llm:
-        with st.container(border=True):
-            st.markdown("### 🔑 Konfigurasi Gemini LLM")
-            st.markdown(
-                "1. Dapatkan API key di [aistudio.google.com](https://aistudio.google.com/app/apikey)\n"
-                "2. Salin `.env.example` → `.env`\n"
-                "3. Isi `GEMINI_API_KEY=...`\n"
-                "4. Ubah `FEATURE_EXTRACTION_MODE=hybrid`\n"
-                "5. Jalankan ulang `python scripts/03_extract_features.py`"
             )
 
     st.markdown("---")
